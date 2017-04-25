@@ -11782,7 +11782,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11837,7 +11837,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -11964,7 +11964,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12092,7 +12092,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -12159,9 +12159,10 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> Delicatessen, the score for Delicatessen was -10.56(R Square Score), the model prediction is worse than a straigh line model.</p>
-<p>Grocery score is 0.7238,that means that a Decision Tree Regressor has a better benefit to choose the Grocery feature.(more accuracy?)
-Grocery has the best R^2 score, so it's a necessary feature to identify customers'spending habits.</p>
-<p>Delicatessen is a very poor feature for this Decision Tree Regressor model.</p>
+<p>Grocery score is 0.7238.</p>
+<p>A highly predictable feature is not good for the model, because it's important to have key features, that means features that contribute in a unique way to determine the customer segment.</p>
+<p>If added a new feature called Total_Spending, which is the sum of all other features, probably it's gonna be an easy feature to predict, probably score 1, because it's just the sum of all other features.However it doesn't help the Decision Tree Regressor.</p>
+<p>With that in mind, Delicatessen is an important feature to keep, because it helps to predict the customer's spending habit.</p>
 
 </div>
 </div>
@@ -12178,7 +12179,7 @@ Grocery has the best R^2 score, so it's a necessary feature to identify customer
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -13674,20 +13675,16 @@ SUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> I think Detergents_Paper and Grocery might be correlated features.</p>
-<p>R^2 score:</p>
+<p><strong>Answer:</strong></p>
+<p>Delicatessen,Milk and Fresh are really random, they don't exhibit no degree of correlation.
+And that's confirmed with the score from R^2.(Delicatessen -10.5626610325,Fresh -0.379170072447 and Milk -0.442085754637)</p>
+<p>Grocery, Frozen and Detergents_Paper seems to have some linear correlation.
+(Grocery 0.723800832652, Frozen 0.0548481103591 and Detergents_Paper 0.494381677643)</p>
 <ul>
-<li>Grocery 0.723800832652</li>
-<li>Detergents_Paper 0.494381677643</li>
+<li>Delicatessen and Frozen seems to be normally distributed.</li>
+<li>Fresh graph has the right shape, however the skewness is negative.</li>
+<li>Milk, Grocery and Detergents_Paper scatter_matrix have a strange shape, however skewness from Milk and Detergent seems to be neutral and Grocery skewness is negative.</li>
 </ul>
-<p>After plotting theses scatter matrix, Detergents_Paper and Grocery seem to be really correlated, since their plots look similar between each other.(linear approximation)
-But Delicatessen looks familiar between all other data, so it must be not a relevant feature.</p>
-<p>R^2 score:</p>
-<ul>
-<li>Delicatessen -10.5626610325</li>
-</ul>
-<p>All R^2 score confirm my attempts to predict the data.
-R^2 close to 1 means that is a good feature, and close to 0 means a bad feature.</p>
 
 </div>
 </div>
@@ -13719,7 +13716,7 @@ R^2 close to 1 means that is a good feature, and close to 0 means a bad feature.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -17167,7 +17164,7 @@ H41Go9FoNBqNRrMq+P8BgiKWD2uC/EAAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -17258,7 +17255,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
@@ -17933,10 +17930,11 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> There are 6 outliers in more than one features.[65,66,75,128,154,289,338]
-I think all outliers should be removed from the dataset.</p>
+<p><strong>Answer:</strong> There are 5 outliers in more than one features.[65,66,75,128,154]</p>
+<p>I think all outliers should be removed from the dataset.</p>
 <p>Because usually outliers in an unsupervised learning algorithm can lead to a model that doesn't generalize well.
 Models that are based on maximazing the gap or techniques that focus on variance are the most affected.</p>
+<p><strong>Removing all data points considered outliers according to Tukey's method may be a bit extreme in this case. We don't have too many data points to start with, and removing many of them may deprive us of meaningful information regarding how the features are distributed across clients.</strong></p>
 
 </div>
 </div>
@@ -17968,7 +17966,7 @@ Models that are based on maximazing the gap or techniques that focus on variance
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
@@ -18357,6 +18355,14 @@ It has Frozen/Fresh/Delicatessen, i could argue about the Delicatessen, but i th
 <li>Delicatessen, 0.5(Weigthed Feature)</li>
 </ul>
 <p>A Retail Business, Delicatessen is the highest positive feature.</p>
+<p><strong>When it comes to discussing the principal components, keep in mind that:</strong></p>
+<ul>
+<li>A large positive weight (or loading) for a feature indicates a positive correlation between that feature and the principal component.</li>
+<li>A large negative loading indicates a negative correlation between that feature and the principal component.</li>
+<li>A loading close to zero indicates there is no correlation between the feature and the principal component.</li>
+<li>Features with high loadings of the same sign present a positive correlation for the observations with high absolute values of that principal component.</li>
+<li>Features with high loadings of different signs present a negative correlation for the observations with high absolute values of that principal component.</li>
+</ul>
 
 </div>
 </div>
@@ -18373,7 +18379,7 @@ It has Frozen/Fresh/Delicatessen, i could argue about the Delicatessen, but i th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -18461,7 +18467,7 @@ It has Frozen/Fresh/Delicatessen, i could argue about the Delicatessen, but i th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -18495,7 +18501,7 @@ It has Frozen/Fresh/Delicatessen, i could argue about the Delicatessen, but i th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -18562,7 +18568,7 @@ It has Frozen/Fresh/Delicatessen, i could argue about the Delicatessen, but i th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -18577,11 +18583,11 @@ It has Frozen/Fresh/Delicatessen, i could argue about the Delicatessen, but i th
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xd130ef0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xe715828&gt;</pre>
 </div>
 
 </div>
@@ -19664,6 +19670,8 @@ It works similar to EM algorithm, so each data has a probability to belongs to a
 (Soft Assigment)</p>
 <p>Since we're developing a model for customer segments, i think K Means is the best algorithm, because after applying the logarithm technique, the features has become normally distributed and after applying PCA, the graph from Dimension 1 and Dimension 2 seems to be defined(3 features associated with each PC, and axis are almost perpendicular to each other).</p>
 <p><strong>Note: Intuitively, K-Means assumes that the clusters of data are contained spheres. On the other hand, GMM assumes the clustered data are elliptical, thus is more flexible. We can also consider GMM as a generalization of k-means clustering by accounting for the covariance and centres of the latent Gaussian.</strong></p>
+<p><strong>An important point about both K-Means and GMM is that for both algorithms the number of clusters (or Gaussian distributions) must be defined beforehand - which is not the case for hierarchical clustering, for instance.
+One way to deal with this, as we see later on in this notebook, is to test several different numbers of clusters and saving the best result among them, according to a metric such as the silhouette score.</strong></p>
 
 </div>
 </div>
@@ -19691,7 +19699,7 @@ It works similar to EM algorithm, so each data has a probability to belongs to a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
@@ -19785,7 +19793,7 @@ It works similar to EM algorithm, so each data has a probability to belongs to a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -19801,11 +19809,11 @@ It works similar to EM algorithm, so each data has a probability to belongs to a
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xd26bba8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xc243b00&gt;</pre>
 </div>
 
 </div>
@@ -21447,7 +21455,7 @@ Ajq6tegd7wAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
@@ -21656,6 +21664,8 @@ Ajq6tegd7wAAAABJRU5ErkJggg==
 <li>Low relative value in Detergents_Paper, Grocery and Milk.</li>
 <li>Closer to mean: Fresh and Frozen</li>
 </ul>
+<p><strong>So, whether a customer belongs to one segment or another seems to depend almost exclusively on Dimension 1. And what does Dimension 1 represent?</strong></p>
+<p>Dimension 1 represented by Milk, Grocery and Detergents_Paper.(Biplot Graph / Highest Bars)Positive Weigth</p>
 
 </div>
 </div>
@@ -21673,7 +21683,7 @@ Ajq6tegd7wAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -21965,6 +21975,8 @@ One for Segment 0 and another for Segment 1, because we cannot be sure, but prob
 <p>The score will be the mean between the validations runs.</p>
 <p>Train group &gt;&gt; Control Set</p>
 <p>Test group &gt;&gt; Variation Set</p>
+<p><strong>You capture the main point here: any test performed on the customers, including an A/B test, must take into account the fact that there are two different customer segments. Mixing the segments may lead to undesirable results in the test.</strong></p>
+<p><strong>For instance, suppose one segment would welcome a change in delivery system, while the second wouldn't. Suppose also that in the A/B test, most of the customers selected for a trial change are from the second segment. One could then conclude that customers as a whole would oppose a change in delivery system, which would not be true.</strong></p>
 
 </div>
 </div>
@@ -21997,6 +22009,7 @@ Segment 1:</li>
 <li>Closer to mean: Fresh and Frozen</li>
 </ul>
 <p><strong>This is a good start. Instead of assigning the customers by analyzing their consumption, we can also use the clustering result as labels and consumption as features to train a model, from which the consumption of the 10 new customers can serve as input to the model. Then we can predict their segment from the supervised learning framework.</strong></p>
+<p><strong>Note that we can also use our unsupervised learner to classify new customers based on their predicted consumption habits, much as we predicted the segment of each sample customer in the notebook. Alternatively, we can use the engineered feature (the cluster each customer belongs to) as a predictor in a supervised learning task.</strong></p>
 
 </div>
 </div>
@@ -22014,7 +22027,7 @@ Segment 1:</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
